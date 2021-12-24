@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>Room Reservation and Pizza Delivery</title>
+</head>
+<body>
+<h1>Room Reservation and Pizza Delivery</h1>
+<ul>
+<li><a href="#pizza">Pizza Delivery</a></li>
+</ul>
+<h2 id="room">Reservation Request</h2>
+<form>
+<fieldset>
+<legend>General Information</legend>
+<table>
+<tr>
+<td>
+Arrival date: </td>
+<td><input type="text" name="arrival"></td>
+</tr>
+<tr>
+<td>Nights:</td> 
+<td><input type="number" name="nights"></td>
+</tr>
+<tr>
+<td>Adults:</td>
+<td><select name="adults">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select></td>
+</tr>
+<tr>
+<td>Children:</td>
+<td><select name="children">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select></td>
+</tr>
+</table>
+</fieldset>
+<br/>
+<fieldset>
+<legend>Preferences</legend>
+<table>
+<tr>
+<td>
+Room type: </td>
+<td><input type="radio" name="room" value="standard" checked> Standard 
+<input type="radio" name="room" value="business"> Business 
+<input type="radio" name="room" value="suite"> Suite </td>
+</tr>
+<tr>
+<td>
+Bed type: </td>
+<td><input type="radio" name="bed" value="king" checked> King 
+<input type="radio" name="bed" value="double double"> Double Double</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" name="area" value="smoking"> Smoking </td>
+</tr>
+</table>
+</fieldset>
+<br/>
+<fieldset>
+<legend>Contact Information</legend>
+<table>
+<tr>
+<td>Name: </td>
+<td><input type="text" name="" required></td>
+</tr>
+<tr>
+<td>Email: </td>
+<td><input type="email" name=""></td>
+</tr>
+<tr>
+<td>Phone: </td>
+<td><input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+</tr>
+</table>
+</fieldset>
+<br/>
+<input type="submit" name="submit" value="Submit Reservation"> 
+<input type="Reset" name="Reset" value="Clear"><br/>
+</form>
+<h2 id="pizza" align="center">Pizza Delivery</h2> 
+<h3 align="center">Online Order Form</h3>
+<form>
+<table width="100%">
+<tr>
+<td align="right">
+*Name:
+</td>
+<td> <input type="text" name="" required> </td>
+<td align="right">*Tel: </td>
+<td ><input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></td>
+</tr>
+<tr>
+<td align="right">
+*Address: </td>
+<td><input type="text" name="" required> </td>
+<td align="right">*Email: </td>
+<td><input type="email" name="" required></td>
+</tr>
+<tr>
+<td align="right">
+*Town/City: </td>
+<td><input type="text" name="" required></td>
+</tr>
+<tr>
+<td align="right">*Postcode: </td>
+<td><input type="number" name="" required></td>
+</tr>
+</table>
+<p align="center"> *required fields</p>
+<table width="100%">
+<tr>
+<td width="10%">
+</td>
+<td>
+<fieldset>
+<legend>Toppings</legend>
+<input type="radio" name="toppings" value="Margherita"> Margherita<br/>
+<input type="radio" name="toppings" value="Four seasons"> Four Seasons<br/>
+<input type="radio" name="toppings" value="Meat feast"> Meat Feast<br/>
+</fieldset>
+</td>
+<td>
+<fieldset>
+<legend>Size</legend>
+<input type="radio" name="size" value="small"> Small<br/>
+<input type="radio" name="size" value="medium"> Medium<br/>
+<input type="radio" name="size" value="large"> Large<br/>
+</fieldset>
+</td>
+<td>
+<fieldset>
+<legend>Extras</legend>
+<input type="checkbox" name="extras" value="mushrooms">Mushrooms<br/>
+<input type="checkbox" name="extras" value="green peppers">Green peppers<br/>
+<input type="checkbox" name="extras" value="anchovies"> Anchovies<br/>
+<input type="checkbox" name="extras" value="extra cheese"> Extra cheese<br/>
+</fieldset>
+</td>
+<td width="10%">
+</td>
+</tr>
+</table>
+<table width="100%">
+<tr>
+<td align="right">
+Prefered delivery time:
+</td> 
+<td><input type="time" name=""></td>
+</tr>
+<tr>
+<td align="right">Delivery instructions or Address:</td> 
+<td><textarea name="instruction" cols="20" rows="5"></textarea></td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="Submit" name="Submit" value="Submit order">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
