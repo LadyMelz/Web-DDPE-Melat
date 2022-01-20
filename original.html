@@ -55,11 +55,11 @@ What I’d like to share with you here is not the content of the book, though. I
 <hr/>
 <b id = "podcast">New Podcast</b>
 <h2>Jack Ma - How I Overcame Failure</h2>
-<audio src="resources\audio/Jack Ma - How I Overcame Failure.mp3" controls></audio>
+<audio src="resources\audio/Jack Ma - How I Overcame Failure.mp3" controls onplay="play()" onpause="pause()></audio>
 <hr/>
 <b>Pick of The Week</b>
 <h2>24 Hours A Day<h2>
-<video src="resources\video/24_HOURS.mp4" width="75%" height="130%" controls></video>
+<video src="resources\video/24_HOURS.mp4" width="75%" height="130%" controls onplay="play()" onpause="pause()></video>
 </td>
 <td valign="top">
 <br/ >
@@ -131,5 +131,15 @@ Follow Us On:
 </td>
 </tr>
 </table>
+<script>
+function play() {
+    alert("playing");
+}
+
+function pause() {
+    alert("paused");
+}
+</script>
+
 </body>
 </html>
