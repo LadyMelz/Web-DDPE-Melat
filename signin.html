@@ -3,6 +3,7 @@
 <head>
 <title>Life Hacks Index</title>
 <meta name="keyword" content="Life, Hacks, Motivation">
+<script src="form.js"></script>
 </head>
 <body>
 <table width="100%" height="100%">
@@ -38,17 +39,17 @@
 <td width = "50%" valign = "top">
 <h1>Signin</h1>
 
-<form action = "uiop.gjg">
+<form action = "uiop.gjg" onsubmit="msg1()">
 <p>
 Username:
-<input type = "email" name = "username" size = "15" maxlength = "30" minlength = "5" placeholder = "Email"/>
+<input type = "email" id= "username1" size = "15" maxlength = "30" minlength = "5" placeholder = "Email" onfocus="focusevent()" oninvalid="invalidevent()"/>
 </p>
 <p>
 Password: 
-<input type = "password" name = "password" size = "15" maxlength = "32" minlength = "6" placeholder = "Password"/>
+<input type = "password" name = "password" size = "15" maxlength = "32" minlength = "6" placeholder = "Password" oninvalid="invalidevent()"/>
 </p>
 <p>
-<input type = "submit" name = "signin" value = "Signin"/>
+<input type = "submit" name = "signin" value = "Signin" onsubmit="msg()"/>
 </p>
 </form>
 
