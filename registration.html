@@ -3,6 +3,28 @@
 <head>
 <title>Life Hacks Index</title>
 <meta name="keyword" content="Life, Hacks, Motivation">
+<script>
+function msg1(){  
+ alert("Done");  
+}
+function msg2(){  
+ alert("Cleared");  
+}
+function focusevent(){
+ document.getElementById("username1").style.background="aqua";
+}
+function blurevent(){
+ if(document.getElementById("password1").length < 6){
+  document.getElementById("password1").style.background="red";
+ }
+}
+function inputevent(){
+ document.getElementById("phone").style.background="yellow";
+}
+function invalidevent(){  
+ alert("Invalid input detected");  
+}  
+</script>
 </head>
 <body>
 <table width="100%" height="100%">
@@ -40,16 +62,16 @@
 <h1>Form</h1>
 <h2> Register </h2>
 
-<form action = "uiop.gjg">
+<form action = "uiop.gjg" onsubmit="msg1()"  onreset="msg2()">
 <p>
 Full Name:<br/>
-<input type = "text" name = "username" size = "50%" maxlength = "50"/>
+<input type = "text" id = "username1" size = "50%" maxlength = "50" onfocus="focusevent()"/>
 <br/>
 Phone:<br/> 
-<input type = "text" name = "phone" size = "50%" maxlength = "30"/>
+<input type = "text" id= "phone" size = "50%" maxlength = "30" oninput="inputevent()"/>
 <br/>
 Age:<br/>
-<input type = "number" name = "age" max= "80" min = "18"/>
+<input type = "number" name = "age" max= "80" min = "18" oninvalid="invalidevent()"/>
 <br/>
 Your Favorite Color:<br/>
 <input type = "color" name = "color"/>
@@ -62,10 +84,10 @@ Gender:<br/>
 <input type = "radio" name = "gender" value = "male"  />Male
 <br/>
 Password:<br/> 
-<input type = "password" name = "password" size = "50%" maxlength = "32" minlength = "6"/>
+<input type = "password" id ="password1" size = "50%" maxlength = "32" minlength = "6" oninvalid="invalidevent()" onblur="blurevent()"/>
 <br/>
 Confirm password:<br/> 
-<input type = "password" name = "password" size = "50%" maxlength = "32" minlength = "6"/>
+<input type = "password" id="password2" size = "50%" maxlength = "32" minlength = "6" oninvalid="invalidevent()"/>
 <br/>
 Skills:<br/>
 <ul>
@@ -88,8 +110,8 @@ Photo:<br/>
 Describe Yourself:<br/>
 <textarea name: "comment" cols = "50" rows = "10"> </textarea>
 <br/>
-<input type = "submit" name = "submit" value = "Submit"/>
-<input type = "submit" name = "reset" value = "Reset"/>
+<input type = "submit" value = "Submit"/>
+<input type = "reset" value = "Reset"/>
 </p>
 </form>
 
