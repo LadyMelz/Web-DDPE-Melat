@@ -3,9 +3,50 @@
 <head>
 <title>Life Hacks Index</title>
 <meta name="keyword" content="Life, Hacks, Motivation">
+
+<script>
+function swap(){
+	const imgItem = document.getElementById("man");
+	const videoItem = document.createElement("video");
+	videoItem.src="resources/video/24_HOURS.mp4";
+	videoItem.controls = true;
+	videoItem.width = "800";
+	imgItem.parentNode.replaceChild(videoItem, imgItem);
+	const v = document.getElementById("video");
+	const i = document.createElement("img");
+	i.src = "resources/images/life1.jpg";
+	i.alt="Man on a mountain";
+	i.width="800"
+	v.parentNode.replaceChild(i, v);
+}
+
+function deleteAudio(){
+	var removeAudio = document.querySelector("audio");
+	var audioContainer = document.getElementById("main");
+	audioContainer.removeChild(removeAudio);
+}
+
+function add(){
+	var list = document.createElement("li");
+	var t = document.createTextNode("Stories");
+	list.appendChild(t);
+	var ulist = document.getElementById("list");
+	ulist.appendChild(list);
+}
+
+function play() {
+    alert("playing");
+}
+
+function pause() {
+    alert("paused");
+}
+ 
+</script>
+
 </head>
 <body>
-<table width="100%" height="100%">
+<table width="100%">
 <tr>
 <td width="10%">
 </td>
@@ -13,13 +54,18 @@
 	<img src="resources\images/logo_gold.png"  width="50px">
 </td>
 <td align="right">
+<form>
+<input type="button" value="Swap" onclick="swap()">
+<input type="button" value="Delete Audio" onclick="deleteAudio()">
+<input type="button" value="Add" onclick="add()">
+</form>
+<br/>
 <a href="#podcast">Podcast</a> <span>|</span> 
 <a href="#">Article</a> <span>|</span> 
 <a href="#">Ideas</a> <span>|</span>
 <a href="signin.html">signin</a> <span>|</span>
 <a href="registration.html">Register</a> <span>|</span>
-<a href="Home2.html">Other</a> <span>|</span>
-<a href="SVG.html">SVG</a> 
+<a href="C:\Users\STIP User\Documents\Third year\IP\Web forms Exercise\Home2.html">Other</a>
 </td>
 <td width="10%">
 </td>
@@ -28,8 +74,7 @@
 <hr/>
 <table>
 <tr>
-<td colspan="2" width="10%"></td>
-<td align="right">
+<td colspan="3" align="right">
 <a href="Source">Go to bottom</a>
 </td>
 <td width="10%">
@@ -38,9 +83,9 @@
 <tr>
 <td width="10%">
 </td>
-<td>
+<td id="main">
 <h1>Eric Hofffer and the Power of Self-Education</h1>
-<img src="life1 (1).jpg" alt="Man on a mountian" usemap="#man">
+<img id="man" src="resources/images/life1.jpg" width="800" alt="Man on a mountian" usemap="#man">
 <map name="man">
     <area shape="rect" coords="0,62,350,260" alt="nature" href="nature.html">
     <area shape="circle" coords="485,106,21" alt="human" href="human.html">
@@ -55,30 +100,27 @@ What I’d like to share with you here is not the content of the book, though. I
 <hr/>
 <b id = "podcast">New Podcast</b>
 <h2>Jack Ma - How I Overcame Failure</h2>
-<audio src="resources\audio/Jack Ma - How I Overcame Failure.mp3" controls onplay="play()" onpause="pause()></audio>
+<audio src="resources\audio/Jack Ma - How I Overcame Failure.mp3" controls></audio>
 <hr/>
 <b>Pick of The Week</b>
 <h2>24 Hours A Day<h2>
-<video src="resources\video/24_HOURS.mp4" width="75%" height="130%" controls onplay="play()" onpause="pause()></video>
+<video id="video" src="resources\video/24_HOURS.mp4" width="75%" height="130%" controls></video>
 </td>
 <td valign="top">
 <br/ >
 <b><big>Recent Posts</big></b>
-
-<details>
-<summary><b>Articles</b></summary>
+<ul id="list">
+<li><b>Articles</b></li>
 <ul>
 <li>The Importance of Goals, Especially During Difficult Times</li>
 <li>5 Steps to Discovering Your Life Purpose In 2022!</li>
 </ul>
-</details>
-<details>
-<summary><b>Ideas</b></summary>
+<li><b>Ideas</b></li>
 <ul>
 <li>10 Books to Read in The Fall</li>
 <li>Top Web Development Projects Ideas</li>
 </ul>
-</details>
+</ul>
 <b><big>Most Viewed Articls</big></b>
 <ol type="I">
 <li> Instant Gratification Is Stopping You From Reaching Your Goals! li></li>
@@ -101,15 +143,6 @@ Third   1GB Mobile Data
 <tr>
 <td width="10%">
 </td>
-<td colspan ="2">
-<hr/>
-</td>
-<td width="10%">
-</td>
-</tr>
-<tr>
-<td width="10%">
-</td>
 <td>
 Follow Us On: 
 <a href="Source">Facebook</a><span>|</span><a href="Source">Twitter</a>
@@ -118,28 +151,12 @@ Follow Us On:
 <a href="Source">Privacy</a><span>|</span>
 <a href="Source">Terms of Use</a>
 </td>
-<td width="10%">
-</td>
 </tr>
 <tr>
-<td width="10%">
-</td>
-<td colspan="2" align="center">
-<footer>Copyright &copy AASTU SEng 2021, All Rights Reserved </footer>
-</td>
-<td width="10%">
-</td>
+<td colspan="4" align="center">
+Copyright &copy AASTU SEng 2021, All Rights Reserved
+ </td>
 </tr>
 </table>
-<script>
-function play() {
-    alert("playing");
-}
-
-function pause() {
-    alert("paused");
-}
-</script>
-
 </body>
 </html>
