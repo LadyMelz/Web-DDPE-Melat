@@ -23,7 +23,24 @@ function inputevent(){
 }
 function invalidevent(){  
  alert("Invalid input detected");  
-}  
+}
+
+//let people = [];
+const person = {}
+
+person.addObject=function (ev){
+		ev.preventDefault();
+		person.name= document.getElementById("username1").value;
+		person.phone= document.getElementById("phone").value;
+		person.age= document.getElementById("age").value;
+		person.color= document.getElementById("color").value;
+		person.print= function(ev){
+					ev.preventDefault();
+					document.getElementById("text").innerHTML = "Name: " + this.name + "\nPhone: " + this.phone + "\nAge: " + this.age + "\nColor: " + this.color + " (Airplane)";
+				}
+	
+}
+
 </script>
 </head>
 <body>
@@ -62,7 +79,7 @@ function invalidevent(){
 <h1>Form</h1>
 <h2> Register </h2>
 
-<form action = "uiop.gjg" onsubmit="msg1()"  onreset="msg2()">
+<form>
 <p>
 Full Name:<br/>
 <input type = "text" id = "username1" size = "50%" maxlength = "50" onfocus="focusevent()"/>
@@ -71,11 +88,12 @@ Phone:<br/>
 <input type = "text" id= "phone" size = "50%" maxlength = "30" oninput="inputevent()"/>
 <br/>
 Age:<br/>
-<input type = "number" name = "age" max= "80" min = "18" oninvalid="invalidevent()"/>
+<input type = "number" id = "age" max= "80" min = "18" oninvalid="invalidevent()"/>
 <br/>
-Your Favorite Color:<br/>
-<input type = "color" name = "color"/>
+Your Favorite Color:
+<input type = "color" id = "color"/>
 <br/>
+<button id="addobj" value="Add" onclick="person.addObject(event)">Add</button><br/>
 Birthdate:<br/>
 <input type = "date" name = "birhtdate"/>
 <br/>
@@ -146,6 +164,10 @@ Second  5GB Mobile Data
 Third   1GB Mobile Data 
 ----------------------------------
 </pre>
+<form>
+<button value="display" onclick="person.print(event)">Display</button>
+<textarea id="text" cols="40" rows="10"></textarea>
+</form>
 </td>
 <td width="10%">
 </td>
